@@ -1,0 +1,47 @@
+{
+    "name": "cs278/rector-extensions",
+    "description": "Extensions for Rector",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Chris Smith",
+            "homepage": "https://www.cs278.org/"
+        }
+    ],
+    "require": {
+        "rector/rector": "^2.0"
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.8",
+        "phpunit/phpunit": "^12.1",
+        "symfony/var-dumper": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cs278\\RectorExtensions\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cs278\\RectorExtensions\\": "tests"
+        }
+    },
+    "scripts": {
+        "cs": "vendor/bin/php-cs-fixer fix",
+        "phpstan": "vendor/bin/phpstan analyse --memory-limit 512M"
+    },
+    "config": {
+        "lock": false,
+        "sort-packages": true,
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true
+        }
+    },
+    "extra": {
+        "bamarni-bin": {
+            "bin-links": true,
+            "forward-command": false
+        }
+    }
+}

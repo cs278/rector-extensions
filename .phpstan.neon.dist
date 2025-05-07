@@ -1,0 +1,15 @@
+parameters:
+  level: max
+  treatPhpDocTypesAsCertain: false
+
+  paths:
+    - src
+    - tests
+
+  ignoreErrors:
+    - message: '{^Call to function assert\(\) with ture will always evaluate to true\.$}'
+      identifier: function.alreadyNarrowedType
+      reportUnmatched: false
+    - message: '{^Call to function assert\(\) with false will always evaluate to false\.$}'
+      identifier: function.impossibleType
+      reportUnmatched: false
